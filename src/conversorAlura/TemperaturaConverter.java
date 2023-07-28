@@ -1,11 +1,14 @@
 package conversorAlura;
 
 import javax.swing.*;
-
+/**
+ * Clase que representa un convertidor de temperaturas.
+ */
 public class TemperaturaConverter {
     /**
-     * Constructor
-     * @param cantidad2
+     * Realiza la conversión de una cantidad de temperatura a diferentes unidades.
+     *
+     * @param cantidad2 La cantidad de temperatura a convertir.
      */
     public void convertir(double cantidad2) {
         String[] opcionesTemperatura = {
@@ -54,11 +57,12 @@ public class TemperaturaConverter {
     }
 
     /**
-     * contructor que
-     * @param cantidad2
-     * @param temperaturaSeleccionada
-     * @param conversion
-     * @param temp
+     * Muestra el resultado de la conversión de temperatura en un cuadro de diálogo.
+     *
+     * @param cantidad2                La cantidad original de temperatura ingresada por el usuario.
+     * @param temperaturaSeleccionada  La opción seleccionada por el usuario para la conversión.
+     * @param conversion               El valor convertido de la temperatura.
+     * @param temp                     La unidad de medida de la temperatura convertida.
      */
     private void mostrarResultado(double cantidad2, String temperaturaSeleccionada, double conversion, String temp) {
         String mensajeResultado = String.format("%.2fº %s son: %.2fº %s", cantidad2, temperaturaSeleccionada, conversion, temp);

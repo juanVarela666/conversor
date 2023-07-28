@@ -1,11 +1,14 @@
 package conversorAlura;
 
 import javax.swing.*;
-
+/**
+ * Clase que representa un convertidor de monedas.
+ */
 public class MonedaConverter {
     /**
-     * Constructor para convertir la moneda
-     * @param cantidad recibe el input de usuario para realizar la convercion con la formula de cada uno
+     * Realiza la conversión de una cantidad de dinero a diferentes monedas.
+     *
+     * @param cantidad La cantidad de dinero a convertir.
      */
     public void convertir(double cantidad) {
         String[] opcionesMonedas = {
@@ -74,11 +77,12 @@ public class MonedaConverter {
     }
 
     /**
-     * constructor que
-     * @param cantidad
-     * @param monedaSeleccionada
-     * @param conversion
-     * @param moneda
+     * Muestra el resultado de la conversión de moneda en un cuadro de diálogo.
+     *
+     * @param cantidad              La cantidad original de dinero ingresada por el usuario.
+     * @param monedaSeleccionada    La opción seleccionada por el usuario para la conversión de moneda.
+     * @param conversion            El valor convertido de la moneda.
+     * @param moneda                La abreviatura de la moneda convertida.
      */
     private void mostrarResultado(double cantidad, String monedaSeleccionada, double conversion, String moneda) {
         String mensajeResultado = String.format("%.2f %s son: %.2f %s", cantidad, monedaSeleccionada, conversion, moneda);

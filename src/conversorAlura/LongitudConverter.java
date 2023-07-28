@@ -1,11 +1,14 @@
 package conversorAlura;
 
 import javax.swing.*;
-
+/**
+ * Clase que representa un convertidor de longitud.
+ */
 public class LongitudConverter {
     /**
-     * constructor
-     * @param cantidad3
+     * Realiza la conversión de una cantidad de longitud a diferentes unidades.
+     *
+     * @param cantidad3 La cantidad de longitud a convertir.
      */
     public void convertir(double cantidad3) {
         String[] opcionesLongitud = {
@@ -79,14 +82,15 @@ public class LongitudConverter {
     }
 
     /**
-     * constructor que recibe
-     * @param cantidad2
-     * @param temperaturaSeleccionada
-     * @param conversion
-     * @param temp
+     * Muestra el resultado de la conversión de longitud en un cuadro de diálogo.
+     *
+     * @param cantidad                La cantidad original de longitud ingresada por el usuario.
+     * @param longitudSeleccionada    La opción seleccionada por el usuario para la conversión.
+     * @param conversion              El valor convertido de la longitud.
+     * @param longitud                La longitud seleccionada
      */
-    private void mostrarResultado(double cantidad2, String temperaturaSeleccionada, double conversion, String temp) {
-        String mensajeResultado = String.format("%.2f %s son: %.2f %s", cantidad2, temperaturaSeleccionada, conversion, temp);
+    private void mostrarResultado(double cantidad, String longitudSeleccionada, double conversion, String longitud) {
+        String mensajeResultado = String.format("%.2f %s son: %.2f %s", cantidad, longitudSeleccionada, conversion, longitud);
         JOptionPane.showMessageDialog(null, mensajeResultado, "Resultado", JOptionPane.INFORMATION_MESSAGE);
     }
 }
